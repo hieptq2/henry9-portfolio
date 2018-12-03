@@ -1,0 +1,117 @@
+.bio{
+	&__photos{
+		margin: 0 0 48px;
+		.row{
+			margin-left: 1px;
+			margin-right: 1px;
+			[class^="col"]{
+				padding-left: 1px;
+				padding-right: 1px;
+			}
+		}
+		&__single-photo{
+			position: relative;
+			display: block;
+			margin-top: 2px;
+			&:after {
+			  content: "";
+			  display: block;
+			  padding-bottom: 100%;
+			}
+			& > div{
+		  	display: block;
+				position: absolute;
+		  	top: 0; left: 0; right: 0; bottom: 0;
+		  	background-color: material-color('grey','200');
+			}
+		}
+	}
+	&__content{
+		&__image-01{
+			width: 320px;
+			margin: 0 48px 0 0;
+			float: left;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	&__gif{
+		margin: 96px 0 0;
+		.contact-gifs{
+			position: relative;
+			background-color: material-color('grey','100');
+			display: block;
+			width: 480px; height: 320px;
+			margin: 0 auto;
+			top: -12px; right: 0;
+			@include box-sizing(content-box);
+			border: 4px dashed $color--divider;
+			.text-note{
+				display: block;
+				position: absolute;
+				top: 50%; @include translateY(-50%);
+				left: 0; right: 0;
+				line-height: 24px;
+				font-size: 24px;
+				font-weight: 400;
+				text-align: center;
+				color: material-color('grey','400');
+			}
+			.bg-gif{
+				display: block;
+				position: absolute;
+				top: 0; left: 0; right: 0; bottom: 0;
+			}
+			.bg-texture-overlay{
+				display: none;
+				&.active{
+					display: block;
+					position: absolute;
+					top: 0; left: 0; right: 0; bottom: 0;
+					background-color: rgba(#000, 0.24);
+					background-image: url('../img/gif/overlay.png');
+					background-repeat: repeat;
+				}
+			}
+			.text-message{
+				@include animation(messageColor 2s linear infinite);
+				pointer-events: none;
+				position: absolute;
+				top: 50%; @include translateY(-50%);
+				left: 0; right: 0;
+				padding: 10%;
+				text-align: center;
+				line-height: 40px;
+				font-size: 32px;
+				font-weight: 400;
+				color: #fff;
+			}
+		}
+	}
+	&__menu{
+		margin: 48px 0 0;
+		line-height: 30px;
+		font-family: $font-family--san-serif;
+		font-size: 22px;
+		font-weight: 300;
+		text-align: center;
+		span{
+			display: inline-block;
+			vertical-align: top;
+			margin: 6px 12px 0;
+			line-height: 24px;
+			font-size: 16px;
+			color: material-color('grey', '300');
+			cursor: default;
+		}
+		a{
+			display: inline-block;
+			vertical-align: top;
+			line-height: 30px;
+			font-size: 22px;
+			@extend %link-no-udl;
+			@extend %link-hover-bdb;
+		}
+	}
+}

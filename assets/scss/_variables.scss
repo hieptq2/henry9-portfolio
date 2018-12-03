@@ -1,0 +1,86 @@
+// Variables
+
+
+// Length
+$height--header: 48px;
+
+
+// Colors
+
+$color--main-lighter:		material-color('green','300');
+$color--main:		 				material-color('green','500');
+$color--main-darker: 		material-color('green','800');
+	
+$color--background: 		#fff;
+$color--body: 					material-color('grey','900');
+$color--text: 					material-color('grey','900');
+$color--subtext: 				material-color('grey','700');
+$color--link: 					$color--main;
+$color--link-hover: 		$color--main-darker;
+
+$color--divider: 				#eaeaea;
+
+
+// Type
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Oswald:300,400,500,600&amp;subset=vietnamese');
+$font-family--serif: 			'Merriweather', serif;
+$font-family--san-serif: 	'Oswald', sans-serif;
+
+$font-weight-normal:		    400;
+$font-weight-bold: 			    600;
+
+$font-size:                 16px;
+$font-height:               28px;
+$font-size--sm:             14px;
+$font-height--sm:           26px;
+$font-size--xs:             12px;
+$font-height--xs:           21px;
+$font-size--xxs:            10px;
+$font-height--xxs:          18px;
+
+$h1-size: 	                42px;
+$h1-height:                 $h1-size * 1;
+
+$h2-size: 	                32px;
+$h2-height:                 $h2-size * 1;
+
+$h3-size: 	                28px;
+$h3-height:                 $h3-size * 1;
+
+$h4-size: 	                24px;
+$h4-height:                 $h4-size * 1;
+
+$h5-size: 	                16px;
+$h5-height:                 $h5-size * 1.1;
+
+$h6-size: 	                10px;
+$h6-height:                 $h6-size * 1.75;
+
+$small-size:                12px;
+$small-height:              $small-size * 1.75;
+
+
+// Grids
+
+$screen-xs:         480px !default;
+$screen-xs-min:     $screen-xs !default;
+$screen-sm:         768px !default;
+$screen-sm-min:     $screen-sm !default;
+$screen-md:         992px !default;
+$screen-md-min:     $screen-md !default;
+$screen-lg:         1200px !default;
+$screen-lg-min:     $screen-lg !default;
+$screen-xl: 				1440px;
+$screen-xl-min:     $screen-xl !default;
+
+$screen-xs-max:			($screen-sm-min - 1) !default;
+$screen-sm-max:			($screen-md-min - 1) !default;
+$screen-md-max:			($screen-lg-min - 1) !default;
+$screen-lg-max:			($screen-xl-min - 1) !default;
+
+// @media (min-width: $screen-xs-min){}
+// @media (min-width: $screen-sm-min){}
+// @media (min-width: $screen-md-min){}
+// @media (min-width: $screen-lg-min){}
+// @media (min-width: $screen-xl-min){}

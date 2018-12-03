@@ -1,0 +1,51 @@
+// Ez4home
+
+.project{
+	&--ez4home &__cover{
+		height: 240px;
+		@media(min-width: 480px){
+			height: 280px;
+		}
+		@media(min-width: $screen-sm-min){
+			height: 320px;
+		}
+		@media(min-width: $screen-md-min){
+			height: 360px;
+		}
+		&__slogan{
+			position: absolute;
+			top: 50%; left: 0; right: 0;
+			margin-top: -20px;
+			line-height: 40px;
+			font-family: $font-family--san-serif;
+			font-size: 24px;
+			font-weight: 300;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			text-align: center;
+			color: #fff;
+		}
+	}
+	// &--a365 &__showcase{
+	// 	margin-top: -96px;
+	// 	@media(min-width: $screen-sm-min){
+	// 		margin-top: -128px;
+	// 	}
+	// 	@media(min-width: $screen-md-min){
+	// 		margin-top: -144px;
+	// 	}
+	// 	img{
+	// 		width: 70%;
+	// 		@media(min-width: $screen-sm-min){
+	// 			width: 60%;
+	// 		}
+	// 		@media(min-width: $screen-md-min){
+	// 			width: 50%;
+	// 		}
+	// 	}
+	// }
+	// &--a365 &__screenshot{
+	// 	margin-bottom: 0;
+	// 	background-color: material-color('grey','100');
+	// }
+}

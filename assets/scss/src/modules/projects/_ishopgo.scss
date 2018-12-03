@@ -1,0 +1,212 @@
+// ishopgo
+.project{
+	&--ishopgo{
+		sup{
+			font-size: 16px;
+			vertical-align: super;
+		}
+	}
+	&--ishopgo &__cover{
+		height: 200px;
+		@media(min-width: 480px){
+			height: 280px;
+		}
+		@media(min-width: $screen-sm-min){
+			height: 360px;
+		}
+		@media(min-width: $screen-md-min){
+			height: 400px;
+		}
+	}
+	&--ishopgo &__showcase{
+		margin-top: -96px;
+		@media(min-width: $screen-sm-min){
+			margin-top: -128px;
+		}
+		@media(min-width: $screen-md-min){
+			margin-top: -180px;
+		}
+		img{
+			width: 90%;
+			@media(min-width: $screen-sm-min){
+				width: 80%;
+			}
+			@media(min-width: $screen-md-min){
+				width: 80%;
+			}
+		}
+	}
+	&--ishopgo .launch-website{
+		@media (max-width: $screen-xs-max){
+			margin: 24px 0;
+		}
+	}
+}
+.ishopgo__header-bg{
+	background-size: 0;
+	background-repeat: no-repeat;
+	background-position: bottom 240px center;
+	@media(min-width: $screen-md-min){
+		background-size: 100%;
+	}
+}
+.ishopgo__wave-icons{
+	position: relative;
+	display: none;
+	margin: -72px auto auto;
+	background-size: 100% 100%;
+	@media(min-width: $screen-md-min){
+		display: block;
+	}
+	.wrapper{
+		position: relative;
+		height: 300px;
+	}
+	.single-icon{
+		position: absolute;
+		width: 72px;
+		height: 72px;
+		padding: 16px;
+		background-color: #fff;
+		border-radius: 50%;
+		box-shadow: 0 1px 8px 0 rgba(#000,.2);
+		img{
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		&:first-child{ 	@include animation(iconMoving 2.0s infinite 1.0s ease-in-out); top: 50%; left: 50%; margin-top: 0; margin-left: 12px; }
+		&:nth-child(2){ @include animation(iconMoving 2.2s infinite 0.2s ease-in-out); top: 50%; left: 50%; margin-top: 12px; margin-left: 192px; }
+		&:nth-child(3){ @include animation(iconMoving 1.8s infinite 1.0s ease-in-out); top: 50%; left: 50%; margin-top: -72px; margin-left: 360px; }
+		&:nth-child(4){ @include animation(iconMoving 2.0s infinite 1.6s ease-in-out); top: 50%; left: 50%; margin-top: 48px; margin-left: 448px; }
+		&:nth-child(5){ @include animation(iconMoving 1.2s infinite 1.2s ease-in-out); top: 50%; right: 50%; margin-top: -48px; margin-right: 96px; }
+		&:nth-child(6){ @include animation(iconMoving 1.6s infinite 0.8s ease-in-out); top: 50%; right: 50%; margin-top: 72px; margin-right: 240px; }
+		&:nth-child(7){ @include animation(iconMoving 2.0s infinite 1.2s ease-in-out); top: 50%; right: 50%; margin-top: -108px; margin-right: 380px; }
+		&:nth-child(8){ @include animation(iconMoving 1.8s infinite 0.8s ease-in-out); top: 50%; right: 50%; margin-top: 28px; margin-right: 432px; }
+	}
+	@include keyframes(iconMoving){
+	  0%{ @include translate3d(0, 0, 0); }
+	  25%{ @include translate3d(0, -4px, 0); }
+	  75%{ @include translate3d(0, 4px, 0); }
+	  100%{ @include translate3d(0, 0, 0); }
+	}
+}
+
+.ishopgo__apps{
+	padding: 24px 0 12px;
+	.row{
+		margin: 0 -6px;
+		& > [class^="col"]{
+			padding: 0 6px;
+		}
+	}
+	.single-app{
+		margin: 0 0 12px;
+		position: relative;
+		overflow: hidden;
+		.rectangle__inner{
+			background-size: 100%;
+			background-position: top center;
+			background-repeat: no-repeat;
+		}
+		// &:after{
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: 0; bottom: 0; right: -160px;
+		// 	width: 120px;
+		// 	background-color: rgba(#fff,.1);
+		// 	@include skew(15deg, 0);
+		// 	@include transition(right .4s ease-in-out);
+		// }
+		// &:hover{
+		// 	&:after{
+		// 		right: calc(100% + 40px);
+		// 	}
+		// }
+	}
+}
+.ishopgo__features{
+	padding: 0;
+	@include column-count(2);
+	@include column-gap(12px);
+	line-height: $font-height--xs;
+	font-size: $font-size--xs;
+	@media (min-width: $screen-sm-min){
+		line-height: $font-height--sm;
+		font-size: $font-size--sm;
+		@include column-count(3);
+	}
+	li{
+		padding: 2px 0;
+	}
+}
+.ishopgo__device-bg{
+	position: relative;
+	div, p, h2, ul, img{
+		position: relative;
+		z-index: 100;
+	}
+	@media (min-width: $screen-lg-min){
+		&:before,
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			top: 50%; 
+			opacity: .24;
+			z-index: -1;
+		}
+		&:before{
+			left: -72px;
+			margin-top: -300px;
+			width: 300px;
+			height: 600px;
+			background-image: url(../../includes/ishopgo/suite-left-ss.jpg);
+			background-size: 100%;
+		}
+		&:after{
+			right: -600px;
+			margin-top: -265px;
+			width: 900px;
+			height: 531px;
+			background-image: url(../../includes/ishopgo/suite-right-ss.jpg);
+			background-size: 100%;
+		}
+	}
+}
+.ishopgo__team{
+	position: relative;
+	margin: 48px 0 0;
+	@media (min-width: $screen-lg-min){
+		margin: 0;
+	}
+	.image-wrapper{
+		filter: grayscale(1);
+		position: relative;
+		@include transition(filter .5s ease-in-out);
+		&:after{
+			content: "";
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background-image: url(../img/texture--noise.png);
+			background-repeat: repeat;
+			z-index: 90;
+			opacity: 0.5;
+			@include transition(opacity .5s ease-in-out);
+			@media (min-width: $screen-md-min){
+				opacity: 0.8;
+			}
+		}
+		img{
+			display: block;
+		}
+		@media (min-width: $screen-md-min){
+			&:hover{
+				filter: none;
+				&:after{
+					opacity: 0;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+// ==============================================
+// Footer
+// ==============================================
+
+.site-footer{
+	line-height: 18px;
+	font-size: 12px;
+	color: material-color('grey','700');
+	&__wrapper{
+		padding: 12px 0;
+		text-align: center;
+		border-top: 1px solid $color--divider;
+		@media (min-width: $screen-sm-min){
+			padding: 16px 0;
+		}
+	}
+	&__copyright{
+		margin: 6px 0;
+		cursor: default;
+		.copyright-symbol{
+			font-size: 8px;
+		}
+		.content-divider{
+			padding: 0 8px;
+		}
+	}
+	&__people{
+		margin: 6px 0;
+		cursor: default;
+		.people__link{
+			text-transform: uppercase;
+			position: relative;
+			margin: 0 2px;
+			display: inline-block;
+			border-bottom: 1px dashed $color--main;
+			@extend %link-no-udl;
+			@extend %link-hover-bdb;
+			// &:after{
+			// 	content: "";
+			// 	display: block;
+			// 	height: 1px;
+			// 	position: absolute;
+			// 	bottom: -2px; left: 0; right: 0;
+			// 	border: 1px dashed $color--main;
+			// }
+			// &:hover{
+			// 	&:after{
+			// 		border-style: solid;
+			// 	}
+			// }
+		}
+	}
+}

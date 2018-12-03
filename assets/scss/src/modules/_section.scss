@@ -1,0 +1,101 @@
+// ==============================================
+// Section
+// ==============================================
+
+.site-container{
+	// display: none;
+}
+
+.section{
+	margin: 72px 0;
+	@media (min-width: $screen-sm-min){
+		margin: 96px 0;
+	}
+	@media (min-width: $screen-md-min){
+		margin: 120px 0;
+	}
+	&__header{
+		margin: 0 0 24px;
+		@media (min-width: $screen-sm-min){
+			margin: 0 0 48px;
+		}
+	}
+	&__heading{
+		position: relative;
+		text-align: center;
+		&__title{
+			position: relative;
+			z-index: 500;
+			margin: 0;
+			font-family: $font-family--san-serif;
+			font-size: 28px;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: material-color('grey','900');
+			@media (min-width: $screen-sm-min){
+				font-size: 36px;
+			}
+		}
+		&__subtitle{
+			position: relative;
+			z-index: 500;
+			margin: 12px 0 0;
+			font-size: 10px;
+			line-height: 16px;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			color: material-color('grey','700');
+			@media (min-width: $screen-sm-min){
+				font-size: 12px;
+				line-height: 20px;
+			}
+			a{
+				@extend %link-no-udl;
+				@extend %link-hover-bdb;
+			}
+		}
+		&:after{
+			content: '';
+			position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin-top: -2px;
+	    @include transform(translateX(-50%) rotate(30deg));
+	    z-index: 0;
+	    height: 1px;
+	    width: 220px;
+	    background-color: #eee;
+	    @media (min-width: $screen-sm-min){
+	    	width: 280px;
+	    }
+		}
+	}
+
+	&--bio{
+		margin-top : 0;
+	}
+	&--project{
+		margin: 0 0 48px 0;
+		@media (min-width: $screen-sm-min){
+			margin: 0 0 72px 0;
+		}
+		@media (min-width: $screen-md-min){
+			margin: 0 0 96px 0;
+		}
+	}
+	&--see-more-work{
+		margin: 48px 0;
+		@media (min-width: $screen-sm-min){
+			margin: 72px 0;
+		}
+		@media (min-width: $screen-md-min){
+			margin: 96px 0;
+		}
+	}
+}
+
+@import "home";
+@import "people";
+@import "about";
+@import "resume";
+

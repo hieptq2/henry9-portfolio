@@ -1,0 +1,38 @@
+// Ez4home
+
+.project{
+	&--itro &__cover{
+		height: 240px;
+		@media(min-width: 480px){
+			height: 280px;
+		}
+		@media(min-width: $screen-sm-min){
+			height: 320px;
+		}
+		@media(min-width: $screen-md-min){
+			height: 360px;
+		}
+	}
+	&--itro &__showcase{
+		margin-top: -96px;
+		@media(min-width: $screen-sm-min){
+			margin-top: -128px;
+		}
+		@media(min-width: $screen-md-min){
+			margin-top: -144px;
+		}
+		img{
+			width: 90%;
+			@media(min-width: $screen-sm-min){
+				width: 85%;
+			}
+			@media(min-width: $screen-md-min){
+				width: 80%;
+			}
+		}
+	}
+	// &--a365 &__screenshot{
+	// 	margin-bottom: 0;
+	// 	background-color: material-color('grey','100');
+	// }
+}

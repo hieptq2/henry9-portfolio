@@ -1,0 +1,97 @@
+// Helper Classes
+
+.bg-cover{
+	@include background-size(cover); 
+	background-position: 50% 50%; 
+}
+.bg-pattern{
+	position: relative;
+	&:after{
+		content: "";
+		position: absolute;
+		top: 0; left: 0; right: 0; bottom: 0;
+		background-image: url(../img/texture--noise.png);
+		background-repeat: repeat;
+		z-index: 50;
+	}
+}
+.rectangle{
+	position: relative;
+	display: block;
+	&:after {
+	  content: "";
+	  display: block;
+	  padding-bottom: 100%;
+	}
+	&__inner{
+  	display: block;
+		position: absolute;
+  	top: 0; left: 0; right: 0; bottom: 0;
+	}
+	&.ratio-11{ &:after { 	padding-bottom: 100%; } }
+	&.ratio-31{ &:after { 	padding-bottom: 33.3333%; } }
+	&.ratio-13{ &:after { 	padding-bottom: 300%; } }
+	&.ratio-32{ &:after { 	padding-bottom: 66.6666%; } }
+	&.ratio-23{ &:after {		padding-bottom: 150%; } }
+	&.ratio-21{ &:after {		padding-bottom: 50%; } }
+	&.ratio-12{ &:after { 	padding-bottom: 200%; } }
+	&.ratio-169{ &:after { 	padding-bottom: 56.25%; } }
+	&.ratio-916{ &:after { 	padding-bottom: 178%; } }
+}
+
+@for $i from 0 through 10 {
+	$opacity: $i * 0.1;
+	.op-#{$i}{ opacity: $opacity; }
+}
+@for $i from 0 through 6 {
+	$margin: $i * 4;
+	.ma-#{$margin}{ margin: $margin + px !important; }
+	.mx-#{$margin}{ margin-left: $margin + px !important; margin-right: $margin + px !important; }
+	.my-#{$margin}{ margin-top: $margin + px !important; margin-bottom: $margin + px !important; }
+	.ml-#{$margin}{ margin-left: $margin + px !important; }
+	.mr-#{$margin}{ margin-right: $margin + px !important; }
+	.mt-#{$margin}{ margin-top: $margin + px !important; }
+	.mb-#{$margin}{ margin-bottom: $margin + px !important; }
+	$padding: $i * 4;
+	.pa-#{$padding}{ padding: $padding + px !important; }
+	.px-#{$padding}{ padding-left: $padding + px !important; padding-right: $padding + px !important; }
+	.py-#{$padding}{ padding-top: $padding + px !important; padding-bottom: $padding + px !important; }
+	.pt-#{$padding}{ padding-top: $padding + px !important; }
+	.pb-#{$padding}{ padding-bottom: $padding + px !important; }
+	.pl-#{$padding}{ padding-left: $padding + px !important; }
+	.pr-#{$padding}{ padding-right: $padding + px !important; }
+}
+
+a.link-hover-bdb{
+	@extend %link-no-udl;
+	@extend %link-hover-bdb;
+}
+
+.ff-san-serif{ font-family: $font-family--san-serif !important; }
+
+.ls-1{ letter-spacing: 1px; }
+.ls-2{ letter-spacing: 2px; }
+.ls-3{ letter-spacing: 3px; }
+.ls-4{ letter-spacing: 4px; }
+
+.color-grey-100{ color: material-color('grey','100'); }
+.color-grey-200{ color: material-color('grey','200'); }
+.color-grey-300{ color: material-color('grey','300'); }
+.color-grey-400{ color: material-color('grey','400'); }
+.color-grey-500{ color: material-color('grey','500'); }
+.color-grey-600{ color: material-color('grey','600'); }
+.color-grey-700{ color: material-color('grey','700'); }
+.color-grey-800{ color: material-color('grey','800'); }
+.color-grey-900{ color: material-color('grey','900'); }
+
+.color-main{  color: $color--main; }
+
+.bg-color-grey-50{ 	background-color: material-color('grey','50'); }
+.bg-color-grey-100{ background-color: material-color('grey','100'); }
+.bg-color-grey-200{ background-color: material-color('grey','200'); }
+.bg-color-grey-300{ background-color: material-color('grey','300'); }
+.bg-color-grey-400{ background-color: material-color('grey','400'); }
+
+.nowrap{ white-space: nowrap; }
+
+.filter-grayscale{ filter: grayscale(1); }
