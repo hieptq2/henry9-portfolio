@@ -2,6 +2,11 @@
 <html lang="en">
 <head>
 	<?php
+
+		$metaDescription 	= "";
+		$metaUrl 					= "";		
+		$meurl 					= "";		
+
     if (isset($title)) {
       $title .= " | Hiep Ta | Front-end Developer & Web Designer | Hanoi, Vietnam";
     }
@@ -18,11 +23,19 @@
   <meta name="description" content="<?php if (isset($meta)) {echo $meta;}?>">
   <meta name="author" content="Hiep Ta">
 
-	<!-- OG -->
-  <meta property="og:title" content=""/>
+  <!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
   <meta property="og:url" content=""/>
+  <meta property="og:title" content=""/>
   <meta property="og:description" content=""/>
   <meta property="og:image" content=""/>
+
+  <!-- Twitter -->
+	<meta property="twitter:card" content="">
+	<meta property="twitter:url" content="">
+	<meta property="twitter:title" content="">
+	<meta property="twitter:description" content="">
+	<meta property="twitter:image" content="">
 
 	<!-- Favicon -->
 	<link rel="icon" href="favicon.ico">
@@ -35,11 +48,7 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   <![endif]-->
 
-	<!-- Scripts -->
-	<!-- <script data-main="js/main" src="assets/libs/require.js"></script> -->
-
 	<!-- Analytics -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129171522-1"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
